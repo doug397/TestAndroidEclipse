@@ -2,21 +2,33 @@ package com.example.android;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
+	private EditText nomeEditText;
+	private TextView saudacaoTextView;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		this.nomeEditText= (EditText) findViewById(R.id.nomeEditText);
+		this.saudacaoTextView= (TextView) findViewById(R.id.saudacaoTextView);
+		
+		
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		
 		return true;
 	}
 
@@ -30,5 +42,12 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void surpreenderUsuario(View v) { 
+		
+		Editable texto= this.nomeEditText.getText();
+		this.saudacaoTextView.setText(texto);
+		
 	}
 }

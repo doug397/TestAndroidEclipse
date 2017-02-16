@@ -8,41 +8,78 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.MainActivity" >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+  <RatingBar
+      android:id="@+id/ratingBar1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="24dp" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/checkBox1"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_marginBottom="38dp"
-        android:layout_marginLeft="32dp"
-        android:text="Douglas é Lindo" />
+  <Button
+      android:id="@+id/saudacaoButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/ratingBar1"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="29dp"
+      android:onClick="surpreenderUsuario"
+      android:text="@string/surpreenda_me" />
+  
+  <TextView
+	android:id="@+id/saudacaoTextView"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/checkBox1"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="textPassword" >
+  <EditText
+      android:id="@+id/nomeEditText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/saudacaoButton"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="21dp"
+      android:ems="10"
+      android:inputType="textPassword" >
 
-        <requestFocus />
-    </EditText>
+      <requestFocus />
+  </EditText>
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_centerVertical="true"
-        android:text="CheckBox" />
+  <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="37dp"
+      android:text="@string/hello_world" />
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@+id/textView2"
+      android:text="Senha"
+      android:textAppearance="?android:attr/textAppearanceLarge" />
+
+  <TextView
+      android:id="@+id/textView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/editText2"
+      android:layout_alignLeft="@+id/textView3"
+      android:layout_marginBottom="44dp"
+      android:text="Login"
+      android:textAppearance="?android:attr/textAppearanceLarge" />
+
+  <EditText
+      android:id="@+id/editText2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/textView3"
+      android:layout_alignLeft="@+id/nomeEditText"
+      android:layout_marginBottom="42dp"
+      android:ems="10" />
+ 
 
 </RelativeLayout>
